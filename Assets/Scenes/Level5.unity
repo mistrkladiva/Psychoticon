@@ -7526,6 +7526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 8380237415656573684, guid: 6eac2c4e2e564254a9d3fab8374ce859, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8380237415656573685, guid: 6eac2c4e2e564254a9d3fab8374ce859, type: 3}
       propertyPath: m_RootOrder
       value: 3
