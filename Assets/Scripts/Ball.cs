@@ -45,6 +45,7 @@ public class Ball : MonoBehaviour
 
                 if (GameController.Levels[i] == SceneManager.GetActiveScene().name)
                 {
+                    StartGame.MusicTime = StartGame.Music.time;
                     SceneManager.LoadScene(GameController.Levels[i+1]);
                     return;
                 }
