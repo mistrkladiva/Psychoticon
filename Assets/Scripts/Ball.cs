@@ -9,7 +9,7 @@ public class Ball : MonoBehaviour
     AudioSource blob;
 
     Rigidbody2D body;
-    float force = 0.9f;
+    float force = 0.99f;
     public Vector3 velocity;
  
     void Start()
@@ -37,7 +37,7 @@ public class Ball : MonoBehaviour
         {
             for (int i = 0; i < GameController.Levels.Length; i++)
             {
-                if(i == GameController.Levels.Length-1)
+                if (i == GameController.Levels.Length - 1)
                 {
                     SceneManager.LoadScene(GameController.Levels[0]);
                     return;
@@ -46,10 +46,18 @@ public class Ball : MonoBehaviour
                 if (GameController.Levels[i] == SceneManager.GetActiveScene().name)
                 {
                     StartGame.MusicTime = StartGame.Music.time;
-                    SceneManager.LoadScene(GameController.Levels[i+1]);
+                    string[] levelName = SceneManager.GetActiveScene().name.Split('-');
+                    if (levelName[0] == "Boss" )
+                    {
+                        SceneManager.LoadScene("LevelExtra");
+                        StartGame.MusicTime = 0;
+                        return;
+                    }
+                    SceneManager.LoadScene(GameController.Levels[i + 1]);
                     return;
                 }
-            }                      
+            }
+            //SceneManager.LoadScene("LevelExtra");
         }
     }
 }

@@ -15,12 +15,16 @@ public class Prolog : MonoBehaviour
     GameObject[] Pages;
     
 
-    string Text1 = "ZULU: 1223456\nNa vìdecké konferenci se sešlo pár chytrých hlav a rozhodli se prozkouman robotovu mysl\nChceš opravdu pokraèovat? A/N";
+    string Text1;
     int stringIndex = 0, pageIndex = 0;
     bool stop = true;
+    string time;
 
     void Start()
     {
+        time = System.DateTime.UtcNow.ToLocalTime().ToString("HH:mm");
+        Text1 = $"ZULU: {time}\nNa vìdecké konferenci se sešlo pár chytrých hlav a rozhodli se prozkouman robotovu mysl\nChceš opravdu pokraèovat? A/N";
+
         StartCoroutine(Wait());
     }
 
@@ -32,7 +36,8 @@ public class Prolog : MonoBehaviour
             {
                 if (pageIndex == 0)
                 {
-                    Text1 = "Nezáleží na tom jak se rozhodneš.. už teï tì pøipojují k psychotickému mozku robota";
+                    Text1 = "Nezáleží na tom jak se rozhodneš..\nUž teï tì pøipojují k psychotickému mozku robota. " +
+                        "Projdi sekce mozku a postupnì otevírej obvody jinak se zpìt nedostaneš!";
                     Pages[pageIndex].SetActive(false);
                     Pages[pageIndex + 1].SetActive(true);
                     TextMesh.text = string.Empty;
@@ -40,6 +45,7 @@ public class Prolog : MonoBehaviour
                     pageIndex++;
                     stop = true;
                     StartCoroutine(Wait());
+                    return;
                 }
                 if (pageIndex == 1)
                 {
