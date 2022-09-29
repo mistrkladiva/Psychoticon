@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LabyrinthController : MonoBehaviour
 {
     [SerializeField]
-    float smerRotace = -1, rychlostRotace = 7f;
+    float smerRotace = -1, rychlostRotace = 5f;
     float uhelRotace = 0;
 
     void Start()
