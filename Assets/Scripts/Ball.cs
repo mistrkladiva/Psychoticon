@@ -9,7 +9,7 @@ public class Ball : MonoBehaviour
     AudioSource blob;
 
     Rigidbody2D body;
-    float force = 0.99f;
+    float force = 0.90f;
     public Vector3 velocity;
  
     void Start()
@@ -17,7 +17,7 @@ public class Ball : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -37,12 +37,12 @@ public class Ball : MonoBehaviour
             // projdi názvy levelù a zjisti ve kterém jsi
             for (int i = 0; i < GameController.Levels.Length; i++)
             {
-                //Pokud jsi na konci pole levelù zaèni od zaèátku
-                if (i == GameController.Levels.Length - 1)
-                {
-                    SceneManager.LoadScene(GameController.Levels[0]);
-                    return;
-                }
+                ////Pokud jsi na konci pole levelù zaèni od zaèátku
+                //if (i == GameController.Levels.Length - 1)
+                //{
+                //    SceneManager.LoadScene(GameController.Levels[0]);
+                //    return;
+                //}
                 //Najdi index aktuálního levelu
                 if (GameController.Levels[i] == SceneManager.GetActiveScene().name)
                 {

@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
     
     void Start()
     {
-        Levels = new string[] { "Level1", "Level2", "Boss-1", "Level3", "Level4", "Boss-1", "Level5", "Boss-1" };
+        Levels = new string[] { "Level1", "Level2", "Boss-1", "Level3", "Level4", "Boss-2", "Level5", "Level6", "Boss-3" };
         s_Bricks = Bricks;
     }
 

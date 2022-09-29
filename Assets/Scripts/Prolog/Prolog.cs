@@ -23,7 +23,8 @@ public class Prolog : MonoBehaviour
     void Start()
     {
         time = System.DateTime.UtcNow.ToLocalTime().ToString("HH:mm");
-        Text1 = $"ZULU: {time}\nNa vìdecké konferenci se sešlo pár chytrých hlav a rozhodli se prozkouman robotovu mysl\nChceš opravdu pokraèovat? A/N";
+        Text1 = $"Místní èas: {time}\nNa tajné vìdecké konferenci se sešlo pár chytrých hlav a rozhodli se prozkoumat robotovu mysl\n" +
+            $"Oslovili tebe jako pokusného králíka, kterého pøipojí k mozku robota\nChceš opravdu pokraèovat? A/N";
 
         StartCoroutine(Wait());
     }
@@ -36,8 +37,9 @@ public class Prolog : MonoBehaviour
             {
                 if (pageIndex == 0)
                 {
-                    Text1 = "Nezáleží na tom jak se rozhodneš..\nUž teï tì pøipojují k psychotickému mozku robota. " +
-                        "Projdi sekce mozku a postupnì otevírej obvody jinak se zpìt nedostaneš!";
+                    Text1 = "Nezáleží na tom jak se rozhodneš..\nUž teï tì pøipojují k psychotickému robotu. " +
+                        "Projdi sekce mozku a postupnì otevírej obvody jinak se zpìt nedostaneš!\n" +
+                        "Ovládání: šipka vlevo, vpravo,\nšipka nahoru akcelerace, Esc restart levelu.";
                     Pages[pageIndex].SetActive(false);
                     Pages[pageIndex + 1].SetActive(true);
                     TextMesh.text = string.Empty;
