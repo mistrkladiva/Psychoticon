@@ -15,7 +15,6 @@ public class Ball : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        Debug.Log(SceneManager.GetActiveScene().name);
     }
 
     void Update()
@@ -35,17 +34,20 @@ public class Ball : MonoBehaviour
     {
         if(collision.name == "NextLevel")
         {
+            // projdi názvy levelù a zjisti ve kterém jsi
             for (int i = 0; i < GameController.Levels.Length; i++)
             {
+                //Pokud jsi na konci pole levelù zaèni od zaèátku
                 if (i == GameController.Levels.Length - 1)
                 {
                     SceneManager.LoadScene(GameController.Levels[0]);
                     return;
                 }
-
+                //Najdi index aktuálního levelu
                 if (GameController.Levels[i] == SceneManager.GetActiveScene().name)
                 {
                     StartGame.MusicTime = StartGame.Music.time;
+                    //Rozdìl název levelu a pokud je to boss naèti mozek jiak naèti level o úroveò výš
                     string[] levelName = SceneManager.GetActiveScene().name.Split('-');
                     if (levelName[0] == "Boss" )
                     {
@@ -57,7 +59,6 @@ public class Ball : MonoBehaviour
                     return;
                 }
             }
-            //SceneManager.LoadScene("LevelExtra");
         }
     }
 }
