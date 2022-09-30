@@ -2042,8 +2042,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286119777
-  m_fontColor: {r: 0.3820755, g: 1, b: 0.46992564, a: 1}
+    rgba: 4280680192
+  m_fontColor: {r: 0, g: 0.9811321, b: 0.14236027, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2102,7 +2102,7 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_renderer: {fileID: 615387013}
   m_maskType: 0
 --- !u!23 &615387013
