@@ -2988,7 +2988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &564921474
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4198,7 +4198,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.50115037, y: 0.0041783405}
-  m_ConnectedAnchor: {x: 0.50000006, y: 0}
+  m_ConnectedAnchor: {x: 0.0019061165, y: 0.008230815}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -4220,9 +4220,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1.08
   m_AngularDrag: 100
-  m_GravityScale: 1
+  m_GravityScale: 0.58
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -5726,7 +5726,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898877712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0812001, y: -0.005789995, z: 0}
+  m_LocalPosition: {x: -2.0655, y: -0.0062, z: 0}
   m_LocalScale: {x: 0.031520363, y: 0.049813416, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
