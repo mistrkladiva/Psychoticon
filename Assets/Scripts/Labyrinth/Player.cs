@@ -36,6 +36,10 @@ public class Player : MonoBehaviour
         if(collision.name == "NextLevel")
         {
             TextLevel.SetActive(true);
+            for (int i = 0; i < GameController.s_Circuits.Count; i++)
+            {
+                GameController.s_Circuits[i] = true;
+            }
             //Destroy(gameObject);
         }
         //pokud je kolize s circuit (obvod)
